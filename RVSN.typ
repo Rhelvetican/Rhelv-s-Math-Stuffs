@@ -1,5 +1,5 @@
 #set document(author: ("Rhelvetican", "greenkookie56"), date: auto)
-#set text(font: "New Computer Modern Math", fill: rgb("fff"))
+#set text(font: "New Computer Modern Math", fill: rgb("fff"), 12pt)
 #set heading(numbering: "I.1.a")
 #set page(numbering: "1", fill: rgb("#212121"))
 
