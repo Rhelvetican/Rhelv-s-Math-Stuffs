@@ -3,13 +3,13 @@
 #set heading(numbering: "I.1.a")
 #set page(numbering: "1", fill: rgb("#212121"))
 
-#import "Template.typ": rainbow, start, transit, transit_higher_ticks, transit_with_ticks
+#import "Template.typ": rainbow, rvsn, start, transit, transit_higher_ticks, transit_with_ticks
 
 #show heading: it => [
   #set align(center)
   #set text(font: "New Computer Modern")
 
-  #rainbow([\~ (#counter(heading).display("I.1.a")) #emph(it.body) \~], 12pt)
+  #rainbow([\~ (#counter(heading).display("I.1.a")) #emph(it.body) \~], 16pt)
 ]
 
 #page()[
@@ -44,7 +44,6 @@
 #align(
   center,
   [
-    \# defines the rest of the array. \
     If the last element of the array is 1, it can be removed.
   ],
 )
@@ -57,7 +56,7 @@
     $[] = 1$\
     $[a; b] = underbrace([a, a, ..., a], "b")$\
     $[[...]; n] = underbrace([[...], [...], ..., [...]], "n")$\
-    ${a; b} = underbrace([[[[a; a]; a]...]; a], "b copies of a")$ \
+    ${a, b} = underbrace([[[[a; a]; a]...]; a], "b copies of a")$ \
     $[a] = a; [a, b] = a arrow.t^1 b = a arrow.t b = a^b$ \
     $a{n}b = a arrow.t^n b = underbrace(a arrow.t^(n - 1) ( a arrow.t^(n - 1) (a arrow.t^(n - 1) (... (a arrow.t^(n - 1) a))) ), "b")$, #text("(Knuth's uparrow notation.)", font: "New Computer Modern", weight: "thin") \
     $[a, b, c] = underbrace([a{2}b, [a{2}b, [...[a{2}b, b, c - 1]...], c - 1], c - 1], "c")$ \
@@ -69,9 +68,12 @@
   ],
 )
 
-=== Function Definitions
 
-#align(center + bottom)[$f_0 (n) = {n; n}$
+
+#align(center + bottom)[
+  === Function Definitions
+
+  $f_0 (n) = {n, n}$
 
   $f_(a + 1) (n) = f^n_a (n) = underbrace(f_a (f_a (f_a (... f_a (n)))), "n")$.]
 
@@ -126,8 +128,34 @@
   )[With $A^('x)_y = A^(overbrace("''...''", x))_y$, $B^('x)_y = B^(overbrace("''...''", x))_y$, ..., $Z^('x)_y = Z^(overbrace("''...''", x))_y$:
 
     #rainbow([$#text("RVSN")_1 = Z^('Z_0)_(Z_0)$], 48pt)
-])])
+] \ ])
 
 = Definition of $"RSVN"_2$
 
-#align(center, "TBA")
+== Extended Array 
+- Notes:
+  - If the last element of the array is 0, it can be removed.
+  \
+
+#align(center)[
+${a, b, c} = {a, {a, {...,{a, {a, b, c - 1}, c - 1}...}, c - 1}, c - 1}$ \
+${a, b, c, d} = {a, b, {a, b, {..., {a, b, c, d - 1}, ...}, d - 1}, d - 1}$ \,
+... \
+${{a, b}} = underbrace({a, a, ..., a}, b)$ \
+${{a, b, c}} = {{a, {{a, {{...,{{a, {{a, b, c - 1}}, c - 1}}...}}, c - 1}}, c - 1}}$ \
+... \
+${{{a, b}}} = underbrace({{a, a, ..., a}}, b)$ \
+${{{a, b, c}}} = {{{a, {{{a, {{{...,{{{a, {{{a, b, c - 1}}}, c - 1}}}...}}}, c - 1}}}, c - 1}}}$ \
+... \
+${\#n, a, b} = underbrace({{...{{a, b}}...}}, "n layers of braces")$ \
+$O_0(n) = {\#n, n, n}$ \
+$O_(x+1) (n)= underbrace(O_x (O_x (O_x (...(O_x (n))))), "x+1")$
+]
+
+
+
+== Definition
+
+#align(center )[
+    #rainbow([$#rvsn(2) = O_(#rvsn(1)) (#rvsn(1))$], 36pt)
+]

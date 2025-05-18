@@ -32,6 +32,10 @@
   mkfn($to_1^ticks$, $to_2^ticks$)
 }
 
+#let rvsn(n) = {
+  $#text("RVSN")_(#n)$
+}
+
 #let rainbow(content, size) = {
   set text(fill: gradient.linear(..color.map.rainbow), size: size)
   box(content)
