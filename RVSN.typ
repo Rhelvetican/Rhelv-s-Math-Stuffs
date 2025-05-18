@@ -9,7 +9,7 @@
   #set align(center)
   #set text(font: "New Computer Modern")
 
-  #rainbow([\~ (#counter(heading).display("I.1.a")) #emph(it.body) \~], 16pt)
+  #rainbow([\~ (#counter(heading).display("I.1.a")) #strong(it.body) \~], 16pt)
 ]
 
 #page()[
