@@ -20,9 +20,9 @@
     mkfn($to_0^'$, $to_1^'$)
     mkfn($to_1^'$, $to_2^'$)
   } else {
-    mkfn($from_(from_0^ticks)^ticks$, $to^(ticks + "'")_0$)
-    mkfn($to_0^(ticks + "'")$, $to_1^(ticks + "'")$)
-    mkfn($to_1^(ticks + "'")$, $to_2^(ticks + "'")$)
+    mkfn($from_(from_0^ticks)^ticks$, $to^(ticks"'")_0$)
+    mkfn($to_0^(ticks"'")$, $to_1^(ticks"'")$)
+    mkfn($to_1^(ticks"'")$, $to_2^(ticks"'")$)
   }
 }
 
@@ -32,7 +32,7 @@
   mkfn($to_1^ticks$, $to_2^ticks$)
 }
 
-#let rainbow(content) = {
-  set text(fill: gradient.linear(..color.map.rainbow), size: 48pt)
+#let rainbow(content, size) = {
+  set text(fill: gradient.linear(..color.map.rainbow), size: size)
   box(content)
 }

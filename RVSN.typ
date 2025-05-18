@@ -9,7 +9,7 @@
   #set align(center)
   #set text(font: "New Computer Modern")
 
-  \~ (#counter(heading).display("I.1.a")) #emph(it.body) \~
+  #rainbow([\~ (#counter(heading).display("I.1.a")) #emph(it.body) \~], 12pt)
 ]
 
 #page()[
@@ -57,7 +57,7 @@
     $[] = 1$\
     $[a; b] = underbrace([a, a, ..., a], "b")$\
     $[[...]; n] = underbrace([[...], [...], ..., [...]], "n")$\
-    ${a; b} = underbrace([[[[a; a]; a;]...]; a], "b copies of a")$ \
+    ${a; b} = underbrace([[[[a; a]; a]...]; a], "b copies of a")$ \
     $[a] = a; [a, b] = a arrow.t^1 b = a arrow.t b = a^b$ \
     $a{n}b = a arrow.t^n b = underbrace(a arrow.t^(n - 1) ( a arrow.t^(n - 1) (a arrow.t^(n - 1) (... (a arrow.t^(n - 1) a))) ), "b")$, #text("(Knuth's uparrow notation.)", font: "New Computer Modern", weight: "thin") \
     $[a, b, c] = underbrace([a{2}b, [a{2}b, [...[a{2}b, b, c - 1]...], c - 1], c - 1], "c")$ \
@@ -75,7 +75,8 @@
 
   $f_(a + 1) (n) = f^n_a (n) = underbrace(f_a (f_a (f_a (... f_a (n)))), "n")$.]
 
-#page([== Definition
+#page([
+  == Definition
 
   #align(center)[
     Jumpstart: \
@@ -124,8 +125,8 @@
     center + bottom,
   )[With $A^('x)_y = A^(overbrace("''...''", x))_y$, $B^('x)_y = B^(overbrace("''...''", x))_y$, ..., $Z^('x)_y = Z^(overbrace("''...''", x))_y$:
 
-    #rainbow[$#text("RVSN")_1 = Z^('Z_0)_(Z_0)$]]
-])
+    #rainbow([$#text("RVSN")_1 = Z^('Z_0)_(Z_0)$], 48pt)
+])])
 
 = Definition of $"RSVN"_2$
 
