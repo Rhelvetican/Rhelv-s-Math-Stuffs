@@ -3,6 +3,8 @@
 #set heading(numbering: "I.1.a")
 #set page(numbering: "1", fill: rgb("#212121"))
 
+#import "Template.typ": rainbow, start, transit, transit_higher_ticks, transit_with_ticks
+
 #show heading: it => [
   #set align(center)
   #set text(font: "New Computer Modern")
@@ -34,44 +36,7 @@
   #align(bottom, outline())
 ]
 
-#let mkfn(from, to) = {
-  align(center, [$#to = f_(#from) (#from)$ \ ])
-}
 
-#let start(from, to) = {
-  mkfn($from$, $to_0$)
-  mkfn($to_0$, $to_1$)
-  mkfn($to_1$, $to_2$)
-}
-
-#let transit(from, to) = {
-  mkfn($from_(from_0)$, $to_0$)
-  mkfn($to_0$, $to_1$)
-  mkfn($to_1$, $to_2$)
-}
-
-#let transit_higher_ticks(from, to, ticks) = {
-  if ticks == "" {
-    mkfn($from_(from_0^ticks)^ticks$, $to^'_0$)
-    mkfn($to_0^'$, $to_1^'$)
-    mkfn($to_1^'$, $to_2^'$)
-  } else {
-    mkfn($from_(from_0^ticks)^ticks$, $to^(ticks + "'")_0$)
-    mkfn($to_0^(ticks + "'")$, $to_1^(ticks + "'")$)
-    mkfn($to_1^(ticks + "'")$, $to_2^(ticks + "'")$)
-  }
-}
-
-#let transit_with_ticks(from, to, ticks) = {
-  mkfn($from_(from_0^ticks)^ticks$, $to^ticks_0$)
-  mkfn($to_0^ticks$, $to_1^ticks$)
-  mkfn($to_1^ticks$, $to_2^ticks$)
-}
-
-#let rainbow(content) = {
-  set text(fill: gradient.linear(..color.map.rainbow), size: 48pt)
-  box(content)
-}
 
 = Definition of $"RSVN"_1$
 
