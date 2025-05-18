@@ -17,7 +17,7 @@
     center,
     text(18pt)[
       #text("Rhelv's Very Small Numbers", weight: "black") \
-      #text("Version 1.0.0 /// The First Protocol", 8pt)
+      #text("Version 1.1.0 /// The Second Protocol", 8pt)
     ],
   )
 
