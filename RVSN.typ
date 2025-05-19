@@ -9,7 +9,7 @@
   #align(center, rainbow([\~ #counter(heading).display("I.1.a.") #strong(it.body) \~]))
 ]
 
-#page()[
+#page[  
   #align(
     center,
     text(18pt)[
@@ -32,6 +32,8 @@
 
   #align(bottom, outline())
 ]
+
+
 
 = Definition of $RR_1$
 == Setup
@@ -112,4 +114,9 @@
   ]
 ]
 
+#page[
+  = Definition of $RR_3$
+  == Setup
 
+  == Definition
+]
