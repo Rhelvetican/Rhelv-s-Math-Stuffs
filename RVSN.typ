@@ -14,7 +14,7 @@
     center,
     text(18pt)[
       #rainbow(text("Rhelv's Very Small Numbers", weight: "black")) \
-      #text("Version 2.0.0 /// The Third Protocol", 8pt)
+      #text("Version 2.0.1 /// The Third Protocol", 8pt)
     ],
   )
 
@@ -42,16 +42,16 @@
 
   $FF_0 (n) = n underbrace([...[n]...], "n brackets")n$ \ \
   $FF_(x+1) (n) = FF^x_x (n)$ with $FF^x$ denotes function iteration. \ \
-  $FF_(alpha) (n) = FF_(alpha[n]) (n)$ if $alpha$ is a limit ordinal. \ #text("With " + $alpha [n]$ + " denotes the " + $n^("th")$ + " term a fixed fundamental sequence assigned to the aforementioned ordinal.", 9pt) \ \
+  $FF_(alpha) (n) = FF_(alpha[n])^n (n)$ if $alpha$ is a limit ordinal. \ #text("With " + $alpha [n]$ + " denotes the " + $n^("th")$ + " term a fixed fundamental sequence assigned to the aforementioned ordinal.", 9pt) \ \
 
   $[a, b] = FF_b (a)$ \ \
   $[a, b, c] = underbrace([a, [a, [..., [a, FF_b (b), c - 1],...], c-1], c - 1], c)$; $[a, b, 1] = [a, b]$ \ \
-  $[a, b, c, d] = underbrace([a, b, [a, b, [..., [a, b, FF_c (c), d - 1],...], d - 1], d - 1], d)$; $[a, b, c, 1] = [a, b, c]$ \
+  $[a, b, c, d] = underbrace([a, FF_c (FF_b (b)), [a, FF_c (FF_b (b)), [..., [a, FF_c (FF_b (b)), FF_c (c), d - 1],...], d - 1], d - 1], d)$; $[a, b, c, 1] = [a, b, c]$ \
   ... \
 
-  $[a; b] = underbrace([a, a, ..., a], b)$ \
+  $[a; b] = underbrace([a, a, ..., a], b)$; 
   $[[...]; b] = underbrace([[...], [...], ..., [...]], b)$ \
-  $[[a; b]] = underbrace([[a; a]; b])$ \
+  $[[a; b]] = [[a; a]; b] = underbrace([[a; a], ..., [a; a]], b "copies of " [a; a])$ \
   ... \
   $[\#^n [a; b]] = underbrace([...[a; b]...], n "brackets")$ \ \
   $GG (n) = [\#^n [n; n]]$
@@ -59,7 +59,7 @@
 
 == Definition
 
-#align(center)[Let $RR_0 = FF_(psi (1, 0, 0, 0)) ({10, 10, 4, 2})$.]
+#align(center)[Let $RR_0 = FF_(phi (1, 0, 0, 0)) ({10, 10, 4, 2})$.]
 
 #columns(2)[
   #align(center)[
@@ -88,7 +88,7 @@
   == Setup
   #align(center)[
     $GG_0^0 (n) = GG_0 (n) = GG (n)$ \
-    $GG_(x+1) (n) = GG^x_x (n) = underbrace(GG_x (GG_x (... (GG_x (n)))), x)$ \
+    $GG_(x+1) (n) = GG^x_x (n) = underbrace(GG_x (GG_x (... (GG_x (n)))), x + 1)$ \
     $GG_(alpha) (n) = GG_(alpha[n])^n (n)$ if $alpha$ is a limit ordinal. \ \ #text("With " + $alpha [n]$ + " denotes the " + $n^("th")$ + " term a fixed fundamental sequence assigned to the aforementioned ordinal.", 9pt) \
     $(a, b) = underbrace(GG_omega ( GG_omega (... (GG_omega (a)))), b)$ \
     $(a, b, c) = underbrace((a, (..., (a, (b, c), c - 1) ,...), c - 1), c)$ ; (a, b, 0) = (a, b) \
