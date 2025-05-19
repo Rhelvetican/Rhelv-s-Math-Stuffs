@@ -13,6 +13,10 @@
 #let ocf = [#strong("OCF")]
 #let ocfs = [#strong("OCF")s]
 
+#let link_to(url) = [
+  #align(center + top)[ #link(url)[ #text("main article", font: "Inter", style: "italic", 8pt, blue)] ]
+]
+
 #page[
   #align(
     center,
@@ -24,10 +28,12 @@
   #grid(
     columns: (1fr, 1fr),
     align(center)[
-      #rainbow(text("&*T", weight: "bold", 12pt))
+      #rainbow(text("&*T", weight: "bold", 12pt)) \
+      #text("@endministrative_", weight: "medium", font: "JetBrains Mono")
     ],
     align(center)[
-      #rainbow(text("Googology Wiki", weight: "bold", 12pt))
+      #rainbow(text("Googology Fandom Wiki", weight: "bold", 12pt)) \
+      #link("https://googology.fandom.com/")[#text("Fandom", weight: "medium", font: "JetBrains Mono")]
     ],
   )
 
@@ -70,6 +76,8 @@
   #align(left)[
     == Bachmann's $psi$
 
+    #link_to("https://googology.fandom.com/wiki/Bachmann%27s_function")
+
     Heinz Bachmann's $psi$ function was the first true ordinal collapsing. It is somewhat cumbersome as it depends on fundamental sequences for all limit ordinals. \
     Rathjen suggests a "recast" of the system as follows:
     \ \
@@ -93,7 +101,9 @@
 
     == Feferman's $theta$
 
-    Feferman's $theta$-functions constitute a hierarchy of single-argument functions $theta_alpha : "On" arrow "On"$ for $alpha in O n$. It is often considered a two-argument function with $theta_alpha (beta) = theta alpha beta$. It is defined like so: \ \
+    #link_to("https://googology.fandom.com/wiki/Feferman%27s_theta_function")
+
+    Feferman's $theta$-functions constitute a hierarchy of single-argument functions $theta_alpha : "On" arrow "On"$ for $alpha in "On"$. It is often considered a two-argument function with $theta_alpha (beta) = theta alpha beta$. It is defined like so: \ \
 
     #align(
       center,
@@ -128,6 +138,9 @@
 
 #page[
   == Buchholz's $psi$
+
+  #link_to("https://googology.fandom.com/wiki/Buchholz%27s_function")
+
   Buchholz's $psi$ is a hierarchy of single-argument functions $psi_v: "On" arrow "On"$ for $v <= omega$, with $psi_v (alpha)$ abbreviated as $psi_v alpha$. Define $Omega_0 = 1$ and $Omega_v = aleph_v$ for $v > 0$, and let $P(alpha)$ be the set of distinct terms in the Cantor normal form of $alpha$ (with each term of the form $omega^xi$ for $xi in "On"$ ): #dnl
 
   #align(
@@ -151,6 +164,9 @@
   The limit of this system is $psi_0 (epsilon_(Omega_omega + 1))$, the Takeuti-Feferman-Buchholz ordinal.
 
   == Madore's $psi$
+
+  #link_to("https://googology.fandom.com/wiki/Madore%27s_function")
+
   David Madore defined the following simpler variant of Buchholz's function as a demonstration of how ordinal collapsing functions work: #dnl
 
   #align(
@@ -271,10 +287,10 @@
   - $theta.alt(alpha)$ is the smallest ordinal $beta$ so that $alpha in C(alpha, beta)$, and $beta$ is greater than all the countable ordinals in $C(alpha, beta)$.
 
   #align(bottom + center)[
-    #set quote(block: true)
+    #set quote(block: true, )
     #rainbow(
       quote(attribution: [jamx02])[
-        *Do you know how do break down finitary Veblen or were you using it as an example?*
+       #text("Do you know how do break down finitary Veblen or were you using it as an example?", weight: "black", 30pt, spacing: 75%)
       ],
     )
   ]
