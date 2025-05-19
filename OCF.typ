@@ -10,8 +10,8 @@
 ]
 
 #let dnl = [\ \ ]
-#let ocf = [#strong("OCF")]
-#let ocfs = [#strong("OCF")s]
+#let ocf = [ #strong("OCF") ]
+#let ocfs = [ #strong("OCF")s ]
 
 #let link_to(url) = [
   #align(center + top)[ #link(url)[ #text("main article", font: "Inter", style: "italic", 8pt, blue)] ]
@@ -21,7 +21,7 @@
   #align(
     center,
     text(16pt)[
-      #rainbow(text("Ordinal Collapsing Functions", weight: "black", 30pt))
+      #rainbow(text("Ordinal Collapsing Functions", weight: "black", 30pt)) 
     ],
   )
 
@@ -285,6 +285,35 @@
     - Zero, all ordinals less than $beta$, and $Omega$.
     - Finite applications of addition, $kappa arrow.bar omega^kappa, kappa arrow.bar theta.alt(kappa)$ (the latter only if $theta.alt(kappa)$ has yet been defined).
   - $theta.alt(alpha)$ is the smallest ordinal $beta$ so that $alpha in C(alpha, beta)$, and $beta$ is greater than all the countable ordinals in $C(alpha, beta)$.
+
+  == Extended Buchholz's $psi$
+
+  #link_to("https://googology.fandom.com/wiki/Extended_Buchholz's_function") 
+
+  Extended Buchholz's function is an extension of Buchholz's function by  Denis Maksudov. The countable limit of Extended Buchholz's function is expressed as $psi_0 (Omega_(Omega_(dots.down))) = psi_0(psi_(psi_(psi_(...) (0)) (0)) (0)) = psi_0 (Lambda)$, where $Lambda$ denotes the least omega fixed point, and is called *Extended Buchholz's ordinal* or *EBO*.
+
+  #dnl
+  
+  #align(
+    center,
+    block(
+      fill: rgb("fff"),
+      width: 120%,
+      inset: 6pt,
+      outset: 6pt,
+      radius: 2pt,
+      text(fill: rgb("000"), 12pt)[
+        $C^0_v (alpha) &= {beta mid(|) beta < Omega_v} \ 
+        C^(n+1)_v (alpha) &= {beta + gamma, psi_(mu) (eta) mid(|) mu, gamma, beta, eta in C^n_v (alpha) and eta < alpha} \ 
+        C_v (alpha) &= attach(union.big, b: n < omega, br: "") C_v^n (alpha) \
+        theta.alt(alpha) &= min{gamma mid(|) gamma in.not C_v (alpha)} \ 
+        Omega_v &= cases(
+          1 "if" v= 0,
+          "smallest ordinal with cardinality" aleph_v "if" v > 0
+        ) $
+      ],
+    ),
+  ) 
 
   #align(bottom + center)[
     #set quote(block: true, )
