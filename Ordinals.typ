@@ -550,6 +550,28 @@ ways. Two main ones being:
   - Here, we have a countable $epsilon$, acting on and describing $Omega arrow.t arrow.t omega$. As I’ve said many times before, this is unstandard because $psi(epsilon_(Omega+1))$ is not in set $C_alpha (x)$. he standard way is to collapse it to the next uncountable, so:
 - $psi(Omega_2)$
 
-So, in this sense, we can think of $Lambda$ as the uncountable variant of $epsilon_0$.
+So, in this sense, we can think of $Lambda$ as the uncountable variant of $epsilon_0$. When we
+write $Omega f p$, we rewrite it as $Lambda$. Infinite tower of $Lambda$ is $Omega_(Lambda + 1)$.
+Infinite $Omega$ on top of $Lambda + 1$ makes $Lambda_2$.
 
-#cen[#text("TBC", 72pt)]
+Now, informally, $I arrow.t arrow.t omega$ is $Omega_(I + 1)$, the formalized collapsed variant of
+$epsilon_(I + 1)$. Now, if we have an infinite nesting of $Omega$ on top of $I$,
+*technically* you could call it $Lambda_(I + 1)$, but that is unstandard
+as it is not in the inaccessible set. So we call it $I_2$.
+
+So, from $psi(I)$ to $psi(I_2) = psi(Phi underbrace((1@(1@(...(1, 0)...))), omega))$: \
+
+#cen[$
+  psi(Omega_(I + 1) arrow.t arrow.t omega) = psi(Omega_(I + 2)) \
+  psi(Omega_(I + Omega)) \
+  psi(Omega_(I + Omega_omega)) \
+  psi(Omega_(I + psi_I (Omega_I))) \
+  psi(Omega_(I + psi_I (Omega_I + psi_I (Omega_I)))) \
+  psi(Omega_(I*2)) \
+  psi(Omega_Omega_(I*2)) \
+  psi(Omega_Omega_Omega_(I*2)) \
+  psi(Lambda_(I + 1)) = psi(I_2) \
+$]
+
+We reached the Jager Ordinal or *JO*, defined as $psi(I arrow.t arrow.t omega)$ or $psi(Omega_(I + 1))$.
+
