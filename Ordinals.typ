@@ -472,3 +472,84 @@ Anyway, we can keep going even deeper and deeper, eventually we will reach \
 $psi(Omega_Omega_dots.down) = psi(Lambda)$, commonly known as the Extended Buchholz's Ordinal.
 
 = From $psi(Lambda)$ to JO
+
+Here, we can carry on with $psi(Lambda)$. We can have $psi(Lambda arrow.t arrow.t omega)$ for uncollapsed $psi(epsilon_(Lambda + 1))$, informally. Formally, it's $psi(Omega_(Lambda + 1))$.
+
+#cen[$
+  psi(Lambda) \
+  psi(Lambda^Lambda) \
+  psi(Omega_(Lambda + 1)) \
+  psi(Omega_(Lambda * 2)) \
+  psi(Omega_(Omega_(Lambda * 2))) \
+  psi(Lambda_2) \
+  dots.v \
+$]
+
+Now, we could keep going, but eventually we get $Lambda f p$ We need a new
+way to represent larger tiers of uncountables, for which I’ll use $Phi$:
+
+#cen[$
+  Phi(1, 0) = Lambda \
+  Phi(2, 0) = Lambda f p \
+$]
+
+Let's diagonalize this into a system:
+
+#cen[$
+  psi(Phi(2, 0))[3] &= psi(Phi(Phi(Phi(1, 0), 0), 0))[3] \
+  &= psi(Phi(Phi(Omega_Omega_Omega, 0), 0))[3] \
+  &= psi(Phi(Phi(Omega_(Omega_psi(Omega_Omega)_(psi(Omega_Omega))), 0), 0))[3]
+$]
+
+Now as you can probably guess... we have a repeat situation. Veblen notation,
+and a new way to collapse. This is where $I$ comes in, the first ($I$)naccessible.
+Which I will talk about later.
+
+Here is where I bring up a new concept. As you probably know, every countable
+ordinal has a sequence it follows, that being the fundamental sequence. Now if we take a close look at this, we can see that these sequences map to natural
+numbers, just like $omega$ does.
+
+This concept is called co-finality. The co-finality of an ordinal is the ”size”
+if its sequence. Every single countable ordinal $alpha$ will have $c o f (alpha) = omega$. Otherwise putting them in number systems would result in them being undefined, as
+with any proof theoretic.
+
+Now I introduce the concept of regularity. Regularity is defined as any number
+having co-finality equal to itself. Ordinal 1 has co-finality of 1, so 1 is regular.
+$omega$ is regular, and every countable ordinals ($psi_0 (alpha)$ for any $alpha$) beyond
+that won't be regular. $Omega$, the first uncountable, is a regular. $c o f (Omega^2) = Omega$,
+so it's not regular. $Omega_2$ is the next number after the first uncountable where
+it is a regular. It continues on through $Omega_k$, with $k$ being a natural number. 
+This is not regular but it has a new special property.
+It is the first ordinal such that it is a limit of regulars. By this, I mean it has
+infinite smaller regulars below it, and can have a sequence be made out of those
+regulars. Any limit $lambda$ in $Omega_lambda$ will be a limit of regulars.
+
+This special property means that these limits of regulars lose their regularity.
+$Omega_Omega$ is neither a regular or a limit of regulars, so everything kind of halts at
+this point. That is until we make a definition so strict, it is forced to move past
+any indexing or fixed point of $Omega$. This is $I$, the first Inaccessible. The definition
+of inaccessibility is:
+
+The first $alpha$ in $Omega_alpha$ such that it is a regular, and a limit of regulars. This forces us
+to create an ordinal so massive it transcends anything we can do with uncountability,
+because it needs to have a sequence of as many regulars as we want, as
+well as still being a regular ($c o f (I) = I$).
+
+\ \ \
+Continuing...
+
+First, you have to understand that $I$ is unreachable from $psi(alpha)$, where
+$alpha$ is anything, countable or not. We also have a clean definition of
+inaccessibility.
+
+Now I want to give some intuition on how to think about I, using compar-
+isons to *BHO*. Let’s think about it for a second. *BHO* is represented in a few
+ways. Two main ones being:
+
+- $psi(epsilon_(Omega+1))$
+  - Here, we have a countable $epsilon$, acting on and describing $Omega arrow.t arrow.t omega$. As I’ve said many times before, this is unstandard because $psi(epsilon_(Omega+1))$ is not in set $C_alpha (x)$. he standard way is to collapse it to the next uncountable, so:
+- $psi(Omega_2)$
+
+So, in this sense, we can think of $Lambda$ as the uncountable variant of $epsilon_0$.
+
+#cen[#text("TBC", 72pt)]
