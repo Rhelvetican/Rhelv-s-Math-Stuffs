@@ -13,7 +13,7 @@
   #align(
     center,
     text(18pt)[
-      #rainbow(text("Rhelv's Very Small Numbers", weight: "black")) \
+      #rainbow(text("Rhelv's Very Small Numbers", weight: "black"), angle: 180deg) \
       #text("Version 3.0.0 /// Infernion", 8pt)
     ],
   )
