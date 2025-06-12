@@ -10,6 +10,10 @@
   ("r", sym.arrow.double.r),
   ("l", sym.arrow.double.l),
   ("d", sym.arrow.double.b),
+
+  ("bar", sym.arrow.double.bar),
+  ("bar.r", sym.arrow.double.bar.r),
+  ("bar.l", sym.arrow.double.bar.l),
 )
 
 #let hyper = symbol(
@@ -33,3 +37,10 @@
 
 #let hash = symbol(sym.hash)
 
+#let uparr(n) = $arrow.t^ #n$
+#let superuparr(n) = $super^ #n$
+#let hyperuparr(n) = $hyper^ #n$
+
+#let fomega(n, arr: sym.arrow) = $#n #arr.t ^ #n #n$
+
+#let tab = "  "
