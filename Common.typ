@@ -25,6 +25,15 @@
   ("b", sym.arrow.triple.b),
 )
 
+#let ultra = symbol(
+  sym.arrow.quad.t,
+
+  ("t", sym.arrow.quad.t),
+  ("r", sym.arrow.quad.r),
+  ("l", sym.arrow.quad.l),
+  ("b", sym.arrow.quad.b),
+)
+
 #let angled = symbol(
   sym.angle.l,
 
@@ -44,3 +53,15 @@
 #let fomega(n, arr: sym.arrow) = $#n #arr.t ^ #n #n$
 
 #let tab = "  "
+
+#let brace(content, level: [1], power: [1]) = [$
+  attach(\{, b: #level, br: "", t: #power, tr: "") #content attach(\}, b: #level, br: "", t: #power, tr: "")
+$]
+
+#let paren(content, level: [1], power: [1]) = [$
+  attach(\(, b: #level, br: "", t: #power, tr: "") #content attach(\), b: #level, br: "", t: #power, tr: "")
+$]
+
+#let bracket(content, level: [1], power: [1]) = [$
+  attach(\[, b: #level, br: "", t: #power, tr: "") #content attach(\], b: #level, br: "", t: #power, tr: "")
+$]
