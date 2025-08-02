@@ -37,7 +37,7 @@
 #let angled = symbol(
   sym.angle.l,
 
-  ("l", sym.angle.l), 
+  ("l", sym.angle.l),
   ("r", sym.angle.r),
   ("double", sym.angle.double),
   ("double.l", sym.angle.double),
@@ -46,22 +46,23 @@
 
 #let hash = symbol(sym.hash)
 
-#let uparr(n) = $arrow.t^ #n$
-#let superuparr(n) = $super^ #n$
-#let hyperuparr(n) = $hyper^ #n$
+#let uparr(n) = $arrow.t^#n$
+#let superuparr(n) = $super^#n$
+#let hyperuparr(n) = $hyper^#n$
 
-#let fomega(n, arr: sym.arrow) = $#n #arr.t ^ #n #n$
+#let fomega(n, arr: sym.arrow) = $#n #arr.t^#n #n$
 
 #let tab = "  "
 
 #let brace(content, level: [1], power: [1]) = [$
-  attach(\{, b: #level, br: "", t: #power, tr: "") #content attach(\}, b: #level, br: "", t: #power, tr: "")
-$]
+    attach(\{, b: #level, br: "", t: #power, tr: "") #content attach(\}, b: #level, br: "", t: #power, tr: "")
+  $]
 
 #let paren(content, level: [1], power: [1]) = [$
-  attach(\(, b: #level, br: "", t: #power, tr: "") #content attach(\), b: #level, br: "", t: #power, tr: "")
-$]
+    attach(\(, b: #level, br: "", t: #power, tr: "") #content attach(\), b: #level, br: "", t: #power, tr: "")
+  $]
 
 #let bracket(content, level: [1], power: [1]) = [$
-  attach(\[, b: #level, br: "", t: #power, tr: "") #content attach(\], b: #level, br: "", t: #power, tr: "")
-$]
+    attach(\[, b: #level, br: "", t: #power, tr: "") #content attach(\], b: #level, br: "", t: #power, tr: "")
+  $]
+
