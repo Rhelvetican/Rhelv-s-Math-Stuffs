@@ -3,6 +3,9 @@
   box(cont)
 }
 
+#let googol = $10^100$
+#let googolplex = $10^googol$
+
 #let super = symbol(
   sym.arrow.double.t,
 
@@ -65,4 +68,3 @@
 #let bracket(content, level: [1], power: [1]) = [$
     attach(\[, b: #level, br: "", t: #power, tr: "") #content attach(\], b: #level, br: "", t: #power, tr: "")
   $]
-
